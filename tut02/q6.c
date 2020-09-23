@@ -21,21 +21,16 @@ Word reverseBits(Word w) {
 
 
     for (int bit = 0; bit < 32; bit++) {
-        // // extract our bit
-        // unsigned int extracted = w & mask;
-
-        // // set mask to use to set the bit later on 
-        // extracted = extracted << (32 - i - 1);
-
-        // // place it in the result.
-        // result = result | extracted;
-
-        // mask = mask << 1;
-
-        //
-        Word wMask = 1u << (31 - bit);
+        // "mask" for checking the bit stored in w.
+        // this goes from left -> right
+        Word wMask = 1u << (31 - bit); 
+        // "mask" to set the bit in result
+        // this goes from right -> left and will always be in the opposite position to wMask
         Word retMask = 1u << bit;
+
+        // check if w has a bit set (ie, the bit is 1) at the current position (determined by wMask)
         if (w & wMask) {
+            // if it was set then set the current bit of result to 1.
             result = result | retMask;
         }
     }

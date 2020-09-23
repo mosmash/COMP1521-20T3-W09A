@@ -59,4 +59,9 @@ compressed: 0 1 0 2
 
 
 // to print in octal or hex in c
-printf("decimal %d, octcal %o, hex %x");
+int number = 0b10101010101010 ; 
+
+char digits = {'0', '1', '0', '1'}
+
+printf("decimal %d, octcal %o, hex %x", number);
+
