@@ -1,0 +1,62 @@
+// convert 10 from decimal to binary
+
+// to convert from decimal (base 10) to anhy base, repeatedly divide by the base and take
+// the remainders from bottom to top.
+
+10 / 2 =5 r 0
+5 / 2  =2 r 1
+2 / 2  =1 r 0
+1/ 2   =0 r 1
+
+1010 in binary
+2^4 = 16 for hex
+2^3 = 8 for octal
+in hex => A
+to convert to octal, need to pad with zeroes
+001 010 => in octal => 12
+
+Hex digits
+0
+1 
+2
+3
+4
+5
+6
+7
+8
+9
+A 10
+B 11
+C 12
+D 13
+E 14
+F 15
+
+
+BCD //
+decimal : 10
+        1       0
+becd: 0001    0000
+
+
+decimal:    258
+        2       5       8
+00000010   00000101    00001000
+
+
+258
+int number = 258;
+
+00000001 00000010
+uncompresed: 1           2
+compressed: 0 1 0 2
+
+  -
+|    |
+  -
+|    |
+
+
+// to print in octal or hex in c
+printf("decimal %d, octcal %o, hex %x");
