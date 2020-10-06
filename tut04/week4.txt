@@ -1,0 +1,58 @@
+Week 4!
+Don't forget the weekly test -> due tonight at 9pm.
+
+Today we're starting with MIPS.
+ - All MIPS labs will be translating from C to MIPS.
+ - This week: 
+    - printing out strings
+    - if statements
+    - loops
+    - nesting if statements and while loops
+
+
+1.  The MIPS processor has 32 general purpose 32-bit registers, referenced as 
+    $0 .. $31. Some of these registers are intended to be used in particular ways 
+    by programmers and by the system. For each of the registers below, give their 
+    symbolic name and describe their intended use:
+
+Register    Symbolic Name   Use
+a. $0       $zero           Read only -> if you try to write a value to it it 
+                                         will be discarded!
+                            Stores the value 0
+
+b. $1       $at             Used by the assembler -> not programmers (directly).
+                            May be used to temporarily hold the result of tests.
+
+c. $2       $v0             Return value of a function.
+                            Used for 32 bit values (or smaller).
+                            We use $v1 when we want to return something bigger,
+                                such as a long (64 bits). 
+
+d. $4       $a0             First argument to a function.
+                            The next three arguments are stored in $a1..a3.
+                            Any extra arguments are then stored in the stack
+                                -> more on this in later weeks...
+
+e. $8       $t0             Register to store temporary values that you can use for
+                                calculations.
+                            These may not necessarily store the same value after
+                                calling a function.
+
+f. $16      $s0             Similar to $t0, however these will keep their same value
+                                after a function call.
+                            When using these values you must save them.
+                                -> we'll learn how to do  this in later weeks...
+
+g. $26      $k0             Register used by the OS (kernel).
+                            Not used by the programmer.
+
+h. $29      $sp             The "stack pointer"
+                            Holds the address of the top of the run-time stack.
+                            -> we'll use this in later weeks...
+
+i. $31      $ra             Used to hold the "return address" for a function.
+                            The instruction "jal" will update $ra with the next
+                                instruction address.
+                            "jr $ra" to return from a function.
+                            -> we'll use this in later weeks...
+                            
