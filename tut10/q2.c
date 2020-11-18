@@ -20,6 +20,7 @@ int main() {
     FILE *fp= fopen(dest, "r");
     if (fp == NULL) {
         perror(dest);
+        exit(1);
     }
 
     int c = fgetc(fp);
