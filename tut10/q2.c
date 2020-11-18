@@ -7,6 +7,7 @@ int main() {
     char *home = getenv("HOME");
     if (home == NULL) {
         fprintf(stderr, "HOME variable failed");
+        exit(1);
     }
 
 
@@ -17,7 +18,7 @@ int main() {
     snprintf(dest, n_bytes, "%s%s", home, diary);
 
     FILE *fp= fopen(dest, "r");
-    if (fp == NULL {
+    if (fp == NULL) {
         perror(dest);
     }
 
